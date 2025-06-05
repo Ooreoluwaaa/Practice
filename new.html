@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #f0f0f0, #d0d0f0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .card {
+            background-color: #f9f9f4;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 340px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            background-color: #2945cc;
+            height: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .content {
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        
+        .description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        
+        .plan-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            gap: 10px;
+        }
+        
+        .music-icon {
+            background-color: #f0f0ff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #2945cc;
+        }
+        
+        .plan-details {
+            flex-grow: 1;
+            text-align: left;
+        }
+        
+        .plan-name {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+            display: block;
+        }
+        
+        .plan-price {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .change-link {
+            color: #2945cc;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .button {
+            background-color: #2945cc;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .cancel-link {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            margin-top: 10px;
+        }
+        
+        .music-notes {
+            position: absolute;
+            font-size: 20px;
+            color: white;
+        }
+        
+        .note1 {
+            top: 40px;
+            left: 100px;
+        }
+        
+        .note2 {
+            top: 90px;
+            right: 90px;
+        }
+        
+        .note3 {
+            top: 60px;
+            right: 130px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <!-- Dancing person with headphones and phone -->
+            <svg width="120" height="120" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Person with raised arms, headphones and phone -->
+                <path d="M80 80 L80 130 L120 130 L120 80 Z" fill="#4cd483" /> <!-- body/shirt -->
+                <circle cx="100" cy="60" r="25" fill="white" /> <!-- head -->
+                
+                <!-- Face -->
+                <circle cx="90" cy="55" r="3" fill="black" /> <!-- left eye -->
+                <circle cx="110" cy="55" r="3" fill="black" /> <!-- right eye -->
+                <path d="M90 70 Q100 75 110 70" stroke="black" stroke-width="2" fill="none" /> <!-- smile -->
+                
+                <!-- Arms raised -->
+                <path d="M80 85 L60 60" stroke="#4cd483" stroke-width="12" /> <!-- left arm -->
+                <path d="M120 85 L140 70" stroke="#4cd483" stroke-width="12" /> <!-- right arm -->
+                <rect x="138" y="60" width="12" height="20" rx="2" fill="white" /> <!-- phone in right hand -->
+                
+                <!-- Headphones -->
+                <path d="M70 60 Q70 35 100 35 Q130 35 130 60" stroke="white" stroke-width="4" fill="none" /> <!-- headband -->
+                <rect x="65" y="55" width="8" height="15" rx="4" fill="white" /> <!-- left ear piece -->
+                <rect x="127" y="55" width="8" height="15" rx="4" fill="white" /> <!-- right ear piece -->
+            </svg>
+            
+            <!-- Music notes -->
+            <div class="music-notes note1">♪</div>
+            <div class="music-notes note2">♫</div>
+            <div class="music-notes note3">♪</div>
+        </div>
+        
+        <div class="content">
+            <div class="title">Order Summary</div>
+            <p class="description">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+            
+            <div class="plan-container">
+                <div class="music-icon">♪</div>
+                <div class="plan-details">
+                    <span class="plan-name">Annual Plan</span>
+                    <span class="plan-price">$59.99/year</span>
+                </div>
+                <a href="#" class="change-link">Change</a>
+            </div>
+            
+            <a href="#" class="button">Proceed to Payment</a>
+            <a href="#" class="cancel-link">Cancel Order</a>
+        </div>
+    </div>
+</body>
+</html>
